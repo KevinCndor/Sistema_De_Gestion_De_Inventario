@@ -11,6 +11,7 @@ public class MenuInventario {
     String opcionesMenu = "";
     Controlador con = new Controlador();
 
+
     public void registrar(){
         System.out.println("***************REGISTRAR PRODUCTO***************");
         System.out.print("Código: ");
