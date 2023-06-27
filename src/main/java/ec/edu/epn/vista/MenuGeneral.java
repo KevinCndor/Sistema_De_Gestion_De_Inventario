@@ -61,6 +61,7 @@ public class MenuGeneral {
                 mnI.registrar();
                 break;
             case 2:
+                mnI.actualizarInfoProducto();
                 break;
             case 3:
 
