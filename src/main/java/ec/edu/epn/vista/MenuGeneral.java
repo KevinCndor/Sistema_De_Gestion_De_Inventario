@@ -1,6 +1,7 @@
 package ec.edu.epn.vista;
 
 import ec.edu.epn.controlador.Controlador;
+import ec.edu.epn.logica.Producto;
 import ec.edu.epn.logica.Sesion;
 
 import java.util.Scanner;
@@ -67,8 +68,13 @@ public class MenuGeneral {
 
                 break;
             case 4:
-
+                Controlador con = new Controlador();
+                for (Producto p : con.leerProductos()) {
+                    System.out.println(p.toString());
+                }
+                inventario();
                 break;
+
             default:
                 System.out.println("Opción no válida");
                 break;
