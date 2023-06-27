@@ -55,14 +55,13 @@ public class MenuInventario {
 
     public boolean ejecutarActualizaciones(int opcion) {
         String codigoA = "";
-        switch (opcion){
+        switch (opcion) {
             case 1:
                 System.out.println("Ingrese el código del producto:");
                 codigoA = entrada.nextLine();
                 System.out.println("Ingrese el nuevo nombre del producto:");
                 String nombreA = entrada.nextLine();
-                con.updateName(codigoA, nombreA);
-                System.out.println("La información ha sido actualizada correctamente");
+                con.actualizarNombre(codigoA, nombreA);
                 m.inventario();
                 return true;
             case 2:
@@ -70,8 +69,7 @@ public class MenuInventario {
                 codigoA = entrada.nextLine();
                 System.out.println("Ingrese el nuevo precio del producto:");
                 double precioA = Double.parseDouble(entrada.nextLine());
-                con.updatePrecio(codigoA, precioA);
-                System.out.println("La información ha sido actualizada correctamente");
+                con.actualizarPrecio(codigoA, precioA);
                 m.inventario();
                 return true;
             case 3:
@@ -79,7 +77,7 @@ public class MenuInventario {
                 codigoA = entrada.nextLine();
                 System.out.println("Ingrese el nuevo distribuidor del producto:");
                 String distribuidorA = entrada.nextLine();
-                con.updateDistribuidor(codigoA, distribuidorA);
+                con.actualizarDistribuidor(codigoA, distribuidorA);
                 System.out.println("La información ha sido actualizada correctamente");
                 m.inventario();
                 return true;
@@ -88,8 +86,7 @@ public class MenuInventario {
                 codigoA = entrada.nextLine();
                 System.out.println("Ingrese las nuevas unidades para el producto:");
                 int unidadesA = Integer.parseInt(entrada.nextLine());
-                int unidadesE = con.readUnidades(codigoA);
-                con.updateUnidades(codigoA, (unidadesE + unidadesA));
+                con.actualizarUnidades(codigoA, unidadesA);
                 System.out.println("La información ha sido actualizada correctamente");
                 m.inventario();
                 return true;
