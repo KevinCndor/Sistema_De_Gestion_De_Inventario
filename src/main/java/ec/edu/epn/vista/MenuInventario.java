@@ -47,6 +47,7 @@ public class MenuInventario {
         opcionesMenu += "\n2. Actualizar precio";
         opcionesMenu += "\n3. Actualizar distribuidor";
         opcionesMenu += "\n4. Actualizar unidades";
+        opcionesMenu += "\n5. Salir";
         opcionesMenu += "\nSeleccione una opción:";
         System.out.println(opcionesMenu);
         int opcion = Integer.parseInt(entrada.nextLine());
@@ -90,10 +91,13 @@ public class MenuInventario {
                 System.out.println("La información ha sido actualizada correctamente");
                 m.inventario();
                 return true;
+            case 5:
+                break;
             default:
                 System.out.println("Opción no válida");
                 m.inventario();
                 return false;
         }
+        return false;
     }
 }

@@ -27,6 +27,7 @@ public class MenuGeneral {
         opcionesMenu += "\n1. Inventario";
         opcionesMenu += "\n2. Ventas";
         opcionesMenu += "\n3. Informe";
+        opcionesMenu += "\n4. Salir";
         opcionesMenu += "\nSeleccione una opción:";
         System.out.println(opcionesMenu);
         opcion = Integer.parseInt(entrada.next());
@@ -40,9 +41,11 @@ public class MenuGeneral {
             case 3:
                 informe();
                 break;
+            case 4:
+                break;
             default:
                 System.out.println("Opción no válida");
-                break;
+                opcionesMenu();
         }
     }
 
@@ -54,6 +57,7 @@ public class MenuGeneral {
         opcionesMenu += "\n2. Actualizar información del producto";
         opcionesMenu += "\n3. Eliminar productos menos comercializados";
         opcionesMenu += "\n4. Ver inventario";
+        opcionesMenu += "\n5. Salir";
         opcionesMenu += "\nSeleccione una opción:";
         System.out.println(opcionesMenu);
         opcion = Integer.parseInt(entrada.next());
@@ -65,7 +69,7 @@ public class MenuGeneral {
                 mnI.actualizarInfoProducto();
                 break;
             case 3:
-
+                /* Por implementar  Iteración 2*/
                 break;
             case 4:
                 Controlador con = new Controlador();
@@ -73,11 +77,11 @@ public class MenuGeneral {
                     System.out.println(p.toString());
                 }
                 inventario();
+            case 5:
                 break;
-
             default:
                 System.out.println("Opción no válida");
-                break;
+                inventario();
         }
     }
     public void ventas(){
