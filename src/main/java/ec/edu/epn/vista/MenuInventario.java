@@ -92,6 +92,7 @@ public class MenuInventario {
                 m.inventario();
                 return true;
             case 5:
+                m.inventario();
                 break;
             default:
                 System.out.println("Opción no válida");

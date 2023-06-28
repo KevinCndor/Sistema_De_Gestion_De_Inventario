@@ -78,7 +78,7 @@ public class MenuGeneral {
                 }
                 inventario();
             case 5:
-                break;
+                opcionesMenu();
             default:
                 System.out.println("Opción no válida");
                 inventario();
